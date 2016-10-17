@@ -3,11 +3,13 @@
 #  Title: 	docker-mount.py
 #  Author:	Jim Clausing
 #  Date:	2016-10-12
-#  Version:	1.0
+#  Version:	1.0.0
 #
 #  Purpose:	Allow the mounting of the AUFS layered/union filesystem from
 #		a docker container to be mounted (read-only) for the purposes
 #		of forensic examination
+#
+# Copyright (c) 2016 Jim Clausing,. All rights reserved.
 #
 
 from sys import *
@@ -37,7 +39,7 @@ def overlay2_mount():
     return()
 
 
-__version_info__ = (1,0)
+__version_info__ = (1,0,0)
 __version__ = ".".join(map(str, __version_info__))
 
 parser = argparse.ArgumentParser(prog='docker-mount', description='Mount docker container filesystem for forensic examination')
